@@ -9,14 +9,22 @@
     font-family: "0xProto Nerd Font";
     font-weight: bold;
     font-size: 12px;
-    min-height: 10px;
+    min-height: 20px;
 }
 
 window#waybar {
-    background: @bar-bg;
+    background: transparent;
+}
+
+window > box {
+	border-radius: 5px;
+	background: @bar-bg;
+	margin: 5px 5px 0 5px;
+	padding: 0 10px;
 }
 
 tooltip {
+	border-radius: 5px;
     background: @main-bg;
     color: @main-fg;
 }
@@ -25,7 +33,12 @@ tooltip {
     padding: 0px;
 }
 
+#workspaces {
+	border-radius: 5px;
+}
+
 #workspaces button, #taskbar button {
+	border-radius: 5px;
 	margin: 3px;
     padding: 0px 5px;
     color: @main-fg;
@@ -44,14 +57,6 @@ tooltip {
 	padding: 0 5px
 }
 
-#tray menu * {
-    min-height: 16px;
-}
-
-#tray menu separator {
-    min-height: 10px;
-}
-
 #tray, #workspaces, #taskbar, #clock, #battery, 
 #pulseaudio, #backlight, #idle_inhibitor, 
 #custom-clipboard, #custom-networkmanager, 
@@ -62,15 +67,29 @@ tooltip {
     padding: 0px 4px;
 }
 
-#custom-r_end {
-    margin-right: 9px;
-}
-
 #custom-l_end {
+	border-radius: 5px 0 0 5px;
     margin-left: 9px;
 }
 
-#custom-padd_bg {
+#custom-r_end {
+    margin-right: 9px;
+    border-radius: 0 5px 5px 0;
+}
+
+#custom-l_work, #custom-r_work {
+	color: @main-fg;
     background: @main-bg;
     margin: 4px 0;
 }
+
+#custom-l_work {
+	border-radius: 5px 0 0 5px;
+    margin-left: 9px;
+}
+
+#custom-r_work {
+    margin-right: 9px;
+    border-radius: 0 5px 5px 0;
+}
+

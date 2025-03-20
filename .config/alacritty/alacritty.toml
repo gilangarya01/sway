@@ -34,7 +34,7 @@ args = ["-c", "~/.scripts/startup_terminal.sh; exec /bin/zsh"]
 [window]
 dynamic_padding   = false
 resize_increments = true
-opacity           = 0.95
+opacity           = 0.96
 
 [window.dimensions]
 columns = 90

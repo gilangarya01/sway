@@ -64,7 +64,7 @@ for_window [window_role="bubble"] floating enable
 ### OUTPUT ###
 ##############
 
-output * background /home/gilang/Pictures/Wallpaper/furina.jpeg fill
+output * background /home/gilang/Pictures/Wallpaper/furina.jpg fill
 
 output eDP-1 resolution 1366x768 position 0,0
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -77,10 +77,10 @@ output eDP-1 resolution 1366x768 position 0,0
 ##################
 
 font pango: 0xProto Nerd Font 10
-gaps inner 10
+gaps inner 5
 default_border pixel 3
 
-set $bg #7da6e1
+set $bg #40a3ec
 set $fg #232429
 set $text #ffffff
 set $urge #ee2e24
@@ -188,7 +188,7 @@ bindsym $mod+Alt+Up resize shrink height 10px
 bindsym $mod+Alt+Right resize grow width 10px
 
 # Special key to take a screenshot with grim
-bindsym Print exec grim
+bindsym Print exec grim $(xdg-user-dir PICTURES)/Screenshoots/$(date +'%s_grim.png')
 
 
 

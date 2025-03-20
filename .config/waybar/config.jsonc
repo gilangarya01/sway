@@ -12,16 +12,14 @@
     "modules-left": [
         "custom/l_end", "tray", "custom/r_end",
         "sway/workspaces",
-        "custom/l_end", "wlr/taskbar", "custom/r_end",
-        "custom/padd"
+        "custom/l_work", "wlr/taskbar", "custom/r_work",
     ],
     "modules-center": [
         "custom/l_end", "idle_inhibitor", "clock", "custom/r_end"
     ],
     "modules-right": [
     	"custom/l_end", "group/system-level", "custom/r_end",
-        "custom/l_end", "group/control-panel", "custom/r_end", 
-        "custom/padd"
+        "custom/l_end", "group/control-panel", "custom/r_end",
     ],
     "group/system-level": {
     	"orientation": "horizontal",
@@ -43,12 +41,11 @@
     // Left Modules
     "tray": {
         "icon-size": 18,
-        "rotate": 0,
         "spacing": 5
     },
     "wlr/taskbar": {
         "format": "{icon}",
-        "icon-size": 18,
+        "icon-size": 22,
         "icon-theme": "Tela-circle-dark",
         "tooltip-format": "{title}",
         "on-click": "activate",
@@ -57,7 +54,6 @@
     // Middle Modules
     "idle_inhibitor": {
     	"format": "{icon}",
-        "rotate": 0,
         "format-icons": {
             "activated": "󰥔 ",
         	"deactivated": " "
@@ -65,7 +61,6 @@
     },
     "clock": {
         "format": "{:%H:%M %p}",
-        "rotate": 0,
         "format-alt": "{:%R | 󰃭 %d·%m·%y}",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
@@ -136,9 +131,13 @@
         "format": " ",
         "tooltip": false
     },
+    "custom/l_work": {
+        "format": " ",
+        "tooltip": false
+    },
 
-    "custom/padd": {
-        "format": "  ",
+    "custom/r_work": {
+        "format": " ",
         "tooltip": false
     },
 }
