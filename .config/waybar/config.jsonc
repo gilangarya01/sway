@@ -1,0 +1,144 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "height": 30,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
+
+    // Modules Layout
+    "modules-left": [
+        "custom/l_end", "tray", "custom/r_end",
+        "sway/workspaces",
+        "custom/l_end", "wlr/taskbar", "custom/r_end",
+        "custom/padd"
+    ],
+    "modules-center": [
+        "custom/l_end", "idle_inhibitor", "clock", "custom/r_end"
+    ],
+    "modules-right": [
+    	"custom/l_end", "group/system-level", "custom/r_end",
+        "custom/l_end", "group/control-panel", "custom/r_end", 
+        "custom/padd"
+    ],
+    "group/system-level": {
+    	"orientation": "horizontal",
+    	"modules": [
+    	   "battery",
+    	   "pulseaudio",
+    	   "backlight"
+        ]
+    },
+    "group/control-panel": {
+        "orientation": "horizontal",
+        "modules": [
+        	"custom/clipboard",
+        	"custom/networkmanager",
+            "custom/power"
+        ]
+    },
+
+    // Left Modules
+    "tray": {
+        "icon-size": 18,
+        "rotate": 0,
+        "spacing": 5
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "icon-theme": "Tela-circle-dark",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+    },
+
+    // Middle Modules
+    "idle_inhibitor": {
+    	"format": "{icon}",
+        "rotate": 0,
+        "format-icons": {
+            "activated": "󰥔 ",
+        	"deactivated": " "
+        }
+    },
+    "clock": {
+        "format": "{:%H:%M %p}",
+        "rotate": 0,
+        "format-alt": "{:%R | 󰃭 %d·%m·%y}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#7832C8'><b>{}</b></span>",
+                "weekdays": "<span color='#3278C8'><b>{}</b></span>",
+            	"today": "<span color='#C86432'><b>{}</b></span>"
+            }
+        },
+    },
+
+    // Right Modules
+    "battery": {
+       "states": {
+          "good": 80,
+          "warning": 30,
+          "critical": 15
+       },
+       "format": "{icon} {capacity}% ",
+       "format-charging": "󰂄 {capacity}%",
+       "format-plugged": "󰚥 {capacity}%",
+       "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    },
+    "backlight": {
+            "format": "{icon} {percent}%",
+            "format-icons": ["󰃞", "󰃟", "󰃠"],
+            "on-scroll-up": "brightnessctl s 1%+",
+            "on-scroll-down": "brightnessctl s 1%-"
+        },
+    "custom/clipboard": {
+        "format": "<span color=\"#89b4fa\">   </span>",
+        "on-click": "sh ~/.scripts/menus/clipboard-manager.sh",
+        "tooltip": false
+    },
+    "custom/networkmanager": {
+        "exec": "sh ~/.scripts/menus/network-manager.sh --status --disabled-color \"#f38ba8\" --enabled-color \"#a6e3a1\" | cat",
+        "format": "{}  ",        
+        "on-click": "sh ~/.scripts/menus/network-manager.sh",
+        "tooltip": false
+    },
+    "custom/power": {
+        "on-click": "sh ~/.scripts/menus/powermenu.sh",
+        "format": "<span color=\"#f38ba8\"></span>",
+        "tooltip": false
+    },
+
+    // Decoration
+    "custom/l_end": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/r_end": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "custom/padd": {
+        "format": "  ",
+        "tooltip": false
+    },
+}

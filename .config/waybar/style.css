@@ -1,0 +1,76 @@
+@define-color bar-bg rgba(3, 7, 16, 0.95);
+@define-color main-bg rgb(16, 28, 68);
+@define-color main-fg rgb(225, 225, 245);
+@define-color wb-act-bg rgb(64,163,236);
+@define-color wb-act-fg rgb(13, 12, 26);
+
+* {
+	border-radius: 0;
+    font-family: "0xProto Nerd Font";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 10px;
+}
+
+window#waybar {
+    background: @bar-bg;
+}
+
+tooltip {
+    background: @main-bg;
+    color: @main-fg;
+}
+
+#workspaces, #taskbar {
+    padding: 0px;
+}
+
+#workspaces button, #taskbar button {
+	margin: 3px;
+    padding: 0px 5px;
+    color: @main-fg;
+}
+
+#workspaces button:hover, #taskbar button:hover {
+	background: @bar-bg;
+}
+
+#workspaces button.focused, #taskbar button.active {
+    background: @wb-act-bg;
+    color: @wb-act-fg;
+}
+
+#workspaces button.focused {
+	padding: 0 5px
+}
+
+#tray menu * {
+    min-height: 16px;
+}
+
+#tray menu separator {
+    min-height: 10px;
+}
+
+#tray, #workspaces, #taskbar, #clock, #battery, 
+#pulseaudio, #backlight, #idle_inhibitor, 
+#custom-clipboard, #custom-networkmanager, 
+#custom-power, #custom-l_end, #custom-r_end {
+    color: @main-fg;
+    background: @main-bg;
+    margin: 4px 0;
+    padding: 0px 4px;
+}
+
+#custom-r_end {
+    margin-right: 9px;
+}
+
+#custom-l_end {
+    margin-left: 9px;
+}
+
+#custom-padd_bg {
+    background: @main-bg;
+    margin: 4px 0;
+}
