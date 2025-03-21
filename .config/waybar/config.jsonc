@@ -10,9 +10,9 @@
 
     // Modules Layout
     "modules-left": [
-        "custom/l_end", "tray", "custom/r_end",
+        "tray",
         "sway/workspaces",
-        "custom/l_work", "wlr/taskbar", "custom/r_work",
+        "custom/padd", "wlr/taskbar",
     ],
     "modules-center": [
         "custom/l_end", "idle_inhibitor", "clock", "custom/r_end"
@@ -131,13 +131,9 @@
         "format": " ",
         "tooltip": false
     },
-    "custom/l_work": {
-        "format": " ",
-        "tooltip": false
-    },
 
-    "custom/r_work": {
+    "custom/padd": {
         "format": " ",
         "tooltip": false
-    },
+     }
 }

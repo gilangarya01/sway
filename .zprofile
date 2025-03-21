@@ -3,3 +3,4 @@ export QT_QPA_PLATFORM=wayland
 export XDG_CURRENT_DESKTOP=Sway
 export GTK_THEME=WhiteSur-Dark
 export TerminalEmulator=alacritty
+export EDITOR=micro

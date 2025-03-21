@@ -14,8 +14,8 @@ This repository contains configuration files (dotfiles) to set up a streamlined,
 #### 1. Clone the Repository
 Clone this repository to your home directory:
 ```bash
-git clone https://github.com/gilangarya01/xfce.git
-cd ~/xfce
+git clone https://github.com/gilangarya01/sway.git
+cd ~/sway
 ```
 
 #### 2. Copy or Rsync Dotfiles

@@ -1,0 +1,59 @@
+configuration {
+    show-icons:                 false;
+}
+
+@theme "theme"
+
+window {
+    fullscreen:                  false;
+    enabled:                     true;
+    border:                      2px solid;
+    border-radius:               5px;
+    border-color:                @main-br;
+    background-color:            @main-bg;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     30px;
+    border:                      0px solid;
+    background-color:            transparent;
+    children:                    [ "listview" ];
+}
+
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     15px;
+    background-color:            transparent;
+}
+
+element {
+    enabled:                     true;
+    padding:                     30px 20px 30px 10px;
+    border-radius:               5px;
+    background-color:            @select-bg;
+    cursor:                      pointer;
+}
+
+element-text {
+    font:                        "feather bold 32";
+    background-color:            transparent;
+    text-color:                  @text;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element selected.normal {
+    background-color:            @select-fg;
+}

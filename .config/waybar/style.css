@@ -20,7 +20,7 @@ window > box {
 	border-radius: 5px;
 	background: @bar-bg;
 	margin: 5px 5px 0 5px;
-	padding: 0 10px;
+	padding: 0 10px 0 18px;
 }
 
 tooltip {
@@ -30,10 +30,6 @@ tooltip {
 }
 
 #workspaces, #taskbar {
-    padding: 0px;
-}
-
-#workspaces {
 	border-radius: 5px;
 }
 
@@ -54,7 +50,7 @@ tooltip {
 }
 
 #workspaces button.focused {
-	padding: 0 5px
+	padding: 0 5px 0 5px;
 }
 
 #tray, #workspaces, #taskbar, #clock, #battery, 
@@ -67,29 +63,22 @@ tooltip {
     padding: 0px 4px;
 }
 
+#tray {
+	border-radius: 5px;
+	margin-right: 18px;
+	padding: 0 5px
+}
+
 #custom-l_end {
 	border-radius: 5px 0 0 5px;
     margin-left: 9px;
 }
 
 #custom-r_end {
+	border-radius: 0 5px 5px 0;
     margin-right: 9px;
-    border-radius: 0 5px 5px 0;
 }
 
-#custom-l_work, #custom-r_work {
-	color: @main-fg;
-    background: @main-bg;
-    margin: 4px 0;
-}
-
-#custom-l_work {
-	border-radius: 5px 0 0 5px;
+#custom-padd {
     margin-left: 9px;
 }
-
-#custom-r_work {
-    margin-right: 9px;
-    border-radius: 0 5px 5px 0;
-}
-

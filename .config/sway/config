@@ -58,6 +58,10 @@ for_window [window_type="menu"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 
+set $opacity 0.98
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
+
 
 
 ##############
@@ -108,7 +112,7 @@ bindsym $mod+Shift+r exec pkill waybar && waybar & disown
 
 bindsym $mod+f exec $browser
 bindsym $mod+e exec $filemanager
-bindsym $mod+space exec rofi -show drun -theme '~/.config/rofi/appmenu.rasi'
+bindsym $mod+space exec rofi -show drun -theme '~/.config/rofi/app-menu.rasi'
 bindsym $mod+x exec sh ~/.scripts/menus/powermenu.sh
 
 # Reload the configuration file

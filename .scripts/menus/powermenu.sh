@@ -1,11 +1,9 @@
-#!/bin/env bash
+#!/bin/bash
 
-choice=$(printf "󰍃  Logout\n  Reboot\n  Shutdown\n  Lock\n󰒲  Suspend" | rofi -dmenu -p "⏻ Power: ")
+choice=$(printf "󰍃\n\n" | rofi -dmenu -theme "~/.config/rofi/powermenu.rasi")
 
 case "$choice" in
-  "󰍃  Logout") pkill -KILL -u "$USER" ;;
-  "  Reboot") systemctl reboot ;;
-  "  Shutdown") systemctl poweroff ;;
-  "  Lock") sh $HOME/bin/screen-lock.sh ;;
-  "󰒲  Suspend") sh $HOME/bin/screen-lock.sh --suspend ;;
+  "󰍃") pkill -KILL -u "$USER" ;;
+  "") systemctl reboot ;;
+  "") systemctl poweroff ;;
 esac
