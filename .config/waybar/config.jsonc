@@ -11,8 +11,8 @@
     // Modules Layout
     "modules-left": [
         "tray",
+        "wlr/taskbar", "custom/padd",
         "sway/workspaces",
-        "custom/padd", "wlr/taskbar",
     ],
     "modules-center": [
         "custom/l_end", "idle_inhibitor", "clock", "custom/r_end"
@@ -42,6 +42,15 @@
     "tray": {
         "icon-size": 18,
         "spacing": 5
+    },
+    "sway/workspaces": {
+      	"on-click": "activate",
+      	"sort-by-number": true,
+        "persistent-workspaces": {
+        	"1": [],
+        	"2": [],
+            "3": [],
+        }
     },
     "wlr/taskbar": {
         "format": "{icon}",

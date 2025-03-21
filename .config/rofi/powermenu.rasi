@@ -2,7 +2,14 @@ configuration {
     show-icons:                 false;
 }
 
-@theme "theme"
+* {
+    main-bg:            rgba(26, 27, 38, 0.95);
+    main-br:            #E1E2E7;
+    select-bg:          #292E42;
+    select-fg:			#C53B53;
+    text:				#CDD6F4;
+    text-fg:			#101C44;
+}
 
 window {
     fullscreen:                  false;
