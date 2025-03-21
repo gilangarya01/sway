@@ -1,31 +1,26 @@
-# Colors (Blood Moon)
-
-# Default colors
-[colors.primary]
-foreground = "#c5c8c6"
-background = "#030710"
-
-# Normal colors
-[colors.normal]
-black   = '#10100E'
-red     = '#C40233'
-green   = '#009F6B'
-yellow  = '#FFD700'
-blue    = '#0087BD'
-magenta = '#9A4EAE'
-cyan    = '#20B2AA'
-white   = '#C6C6C4'
-
-# Bright colors
 [colors.bright]
-black   = '#696969'
-red     = '#FF2400'
-green   = '#03C03C'
-yellow  = '#FDFF00'
-blue    = '#007FFF'
-magenta = '#FF1493'
-cyan    = '#00CCCC'
-white   = '#FFFAFA'
+black = "#444b6a"
+blue = "#7da6ff"
+cyan = "#0db9d7"
+green = "#b9f27c"
+magenta = "#bb9af7"
+red = "#ff7a93"
+white = "#acb0d0"
+yellow = "#ff9e64"
+
+[colors.normal]
+black = "#32344a"
+blue = "#7aa2f7"
+cyan = "#449dab"
+green = "#9ece6a"
+magenta = "#ad8ee6"
+red = "#f7768e"
+white = "#787c99"
+yellow = "#e0af68"
+
+[colors.primary]
+background = "#101017"
+foreground = "#a9b1d6"
 
 [terminal.shell]
 program = "zsh"
@@ -34,7 +29,7 @@ args = ["-c", "~/.scripts/startup_terminal.sh; exec /bin/zsh"]
 [window]
 dynamic_padding   = false
 resize_increments = true
-opacity           = 0.96
+opacity           = 0.95
 
 [window.dimensions]
 columns = 90

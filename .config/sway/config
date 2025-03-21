@@ -58,10 +58,6 @@ for_window [window_type="menu"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 
-set $opacity 0.98
-for_window [class=".*"] opacity $opacity
-for_window [app_id=".*"] opacity $opacity
-
 
 
 ##############
@@ -81,10 +77,10 @@ output eDP-1 resolution 1366x768 position 0,0
 ##################
 
 font pango: 0xProto Nerd Font 10
-gaps inner 5
+gaps inner 10
 default_border pixel 3
 
-set $bg #40a3ec
+set $bg #e1e2e7
 set $fg #232429
 set $text #ffffff
 set $urge #ee2e24

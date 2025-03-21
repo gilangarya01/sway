@@ -17,10 +17,10 @@ window {
     cursor:                      "default";
     spacing:                     0.5em;
     padding:					 1em 2em 1em 2em;
-    border:                      2px solid;
     border-radius:               5px;
-    border-color:                @main-br;
     background-color:            @main-bg;
+    border:						 2px solid;
+    border-color:				 @main-br;
 }
 
 mainbox {

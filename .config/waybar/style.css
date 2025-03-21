@@ -1,7 +1,7 @@
-@define-color bar-bg rgba(3, 7, 16, 0.95);
-@define-color main-bg rgb(16, 28, 68);
+@define-color bar-bg rgba(26, 27, 38, 0.95);
+@define-color main-bg rgb(41, 46, 66);
 @define-color main-fg rgb(225, 225, 245);
-@define-color wb-act-bg rgb(64,163,236);
+@define-color wb-act-bg rgb(225,226,231);
 @define-color wb-act-fg rgb(13, 12, 26);
 
 * {
@@ -9,7 +9,6 @@
     font-family: "0xProto Nerd Font";
     font-weight: bold;
     font-size: 12px;
-    min-height: 20px;
 }
 
 window#waybar {
@@ -24,7 +23,6 @@ window > box {
 }
 
 tooltip {
-	border-radius: 5px;
     background: @main-bg;
     color: @main-fg;
 }
