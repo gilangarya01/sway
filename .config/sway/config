@@ -13,7 +13,7 @@ set $up k
 set $right l
 
 # Program
-set $term alacritty
+set $term foot
 set $browser firefox
 set $filemanager thunar
 
@@ -33,12 +33,15 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 ### FLOATING ###
 ################
 
+set $opacity 0.98
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
+
 for_window [title="File Operation Progress"] floating enabled
 for_window [title="Confirm to replace files"] floating enable
 for_window [title="Choose Files"] floating enable
 for_window [title="Compress"] floating enable
 for_window [title="Extract"] floating enable
-for_window [class="Lxappearance"] floating enable
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable;
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] resize set 800 500
@@ -78,18 +81,18 @@ output eDP-1 resolution 1366x768 position 0,0
 
 font pango: 0xProto Nerd Font 10
 gaps inner 5
+default_floating_border pixel 3
 default_border pixel 3
 
-set $bg #e1e2e7
+set $main #e1e1f5
 set $fg #232429
-set $text #ffffff
-set $urge #ee2e24
+set $text #e1e1f5
+set $back #1a1b26
 
-# class                  border   backgr     text     indi  chil_border
-client.focused          $bg $bg $text $bg $bg
-client.focused_inactive $fg $fg $text $fg $fg
-client.unfocused        $fg $fg $text $fg $fg
-client.urgent           $urge $urge $text $urge $urge
+# class (<border> <background> <text> <indicator> <child_border>)
+client.focused          $main $back $text $main $main
+client.focused_inactive $fg $back $text $fg $fg
+client.unfocused        $fg $back $text $fg $fg
 
 
 

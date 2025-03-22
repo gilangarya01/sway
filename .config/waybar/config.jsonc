@@ -120,7 +120,8 @@
     },
     "custom/networkmanager": {
         "exec": "sh ~/.scripts/menus/network-manager.sh --status --disabled-color \"#f38ba8\" --enabled-color \"#a6e3a1\" | cat",
-        "format": "{}  ",        
+        "format": "{}  ",
+        "interval": 5,
         "on-click": "sh ~/.scripts/menus/network-manager.sh",
         "tooltip": false
     },

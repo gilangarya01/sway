@@ -113,6 +113,10 @@ alias code=codium
 alias start='sudo systemctl start '
 alias stop='sudo systemctl stop '
 
+# Sway
+alias getappid="swaymsg -t get_tree | jq '.. | select(.app_id?) | .app_id' | sort -u"
+alias getapptitle="swaymsg -t get_tree | jq '.. | select(.name?) | .name' | sort -u"
+
 #MPV
 alias music='~/.scripts/music.sh'
 
