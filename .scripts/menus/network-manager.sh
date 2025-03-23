@@ -2,8 +2,8 @@
 
 # Global constants
 SESSION_TYPE="$XDG_SESSION_TYPE"
-ENABLED_COLOR="#A3BE8C"      # Color for enabled status
-DISABLED_COLOR="#D35F5E"      # Color for disabled status
+ENABLED_COLOR="#41a6b5"      # Color for enabled status
+DISABLED_COLOR="#ff757f"      # Color for disabled status
 SIGNAL_ICONS=("󰤟 " "󰤢 " "󰤥 " "󰤨 ")    # Icons for different signal strengths
 SECURED_SIGNAL_ICONS=("󰤡 " "󰤤 " "󰤧 " "󰤪 ") # Icons for secured signals
 WIFI_CONNECTED_ICON=" "      # Icon for connected Wi-Fi
@@ -168,7 +168,7 @@ main_menu() {
 
     case $chosen_option in
         "$WIFI_TOGGLE_ON_ICON Enable Wi-Fi" | "$WIFI_TOGGLE_OFF_ICON Disable Wi-Fi")
-            nmcli radio wifi "$wifi_toggle_command"
+            nmcli radio wifi "$wifi_toggle_command" && notify-send "Wi-Fi Toggled" "Wi-Fi has been turned ${wifi_toggle_command}."
             ;;
         "$WIFI_MANAGE_ICON Manage Wi-Fi")
             manage_wifi

@@ -2,7 +2,7 @@
 configuration {
     modi:                        "drun";
     show-icons:                  true;
-    display-drun:                "󱎱 Apps:";
+    display-drun:                "";
     font:                        "0xProto Nerd Font 10";
     icon-theme:                  "Tela-circle-dark";
 }
@@ -17,10 +17,10 @@ window {
     cursor:                      "default";
     spacing:                     0.5em;
     padding:					 1em 2em 1em 2em;
+    border:                      2px solid;
     border-radius:               5px;
+    border-color:                @main-br;
     background-color:            @main-bg;
-    border:						 2px solid;
-    border-color:				 @main-br;
 }
 
 mainbox {
@@ -34,7 +34,7 @@ mainbox {
 // Inputs //
 inputbar {
     enabled:                     true;
-    children:                    [ prompt, entry ];
+    children:                    [ prompt, entry, clear-button ];
     spacing:                     0.5em;
     padding:                     0.5em;
     cursor:                      pointer;
@@ -42,9 +42,20 @@ inputbar {
     text-color:                  @text;
 }
 
+clear-button {
+    enabled:                     true;
+    padding:                     0.5em 1em;
+    cursor:                      pointer;
+    background-color:            @main-br;
+    text-color:                  @select-fg;
+    border:                      2px solid;
+    border-color:                @main-br;
+    border-radius:               5px;
+}
+
 prompt {
     enabled:                     true;
-    padding:                     0.5em 1.2em 0.5em 1em;
+    padding:                     0.5em 1em 0.5em 1.5em;
     text-align:                  center;
     cursor:                      default;
     background-color:            @main-br;
@@ -68,13 +79,13 @@ entry {
 // Lists //
 listbox {
     spacing:                     1em;
-    children:                    [ "inputbar", "listview", "dummy" ];
+    children:                    [ "inputbar", "listview" ];
     background-color:            transparent;
 }
 
 listview {
     enabled:                     true;
-    columns:                     2;
+    columns:                     1;
     lines:                       6;
     cycle:                       true;
     dynamic:                     true;
@@ -87,10 +98,6 @@ listview {
     cursor:                      "default";
     background-color:            transparent;
     text-color:                  @text;
-}
-
-dummy {
-    background-color:            transparent;
 }
 
 // Elements //

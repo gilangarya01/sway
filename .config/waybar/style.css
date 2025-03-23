@@ -1,5 +1,4 @@
-@define-color bar-bg rgba(26, 27, 38, 0.95);
-@define-color main-bg rgb(41, 46, 66);
+@define-color main-bg rgb(26, 27, 38);
 @define-color main-fg rgb(225, 225, 245);
 @define-color wb-act-bg rgb(225,226,231);
 @define-color wb-act-fg rgb(13, 12, 26);
@@ -17,38 +16,29 @@ window#waybar {
 
 window > box {
 	border-radius: 5px;
-	background: @bar-bg;
 	margin: 5px 5px 0 5px;
 	padding: 0 10px 0 18px;
 }
 
 tooltip {
-    background: @bar-bg;
+    background: @main-bg;
     color: @main-fg;
     border-radius: 5px;
 }
 
 #workspaces, #taskbar {
+	background: @main-bg;
 	border-radius: 5px;
 	margin: 4px 0;
 }
 
-#taskbar {
-	background: @main-bg;
-}
-
 #workspaces button, #taskbar button {
 	border-radius: 5px;
-    color: @main-fg;
-    padding: 0px;
+    padding: 3px 0;
 }
 
 #taskbar button {
 	padding: 0px 5px;
-}
-
-#workspaces button:hover, #taskbar button:hover {
-	background: @bar-bg;
 }
 
 #workspaces button.focused, #taskbar button.active {
@@ -60,10 +50,21 @@ tooltip {
 #pulseaudio, #backlight, #idle_inhibitor, 
 #custom-clipboard, #custom-networkmanager, 
 #custom-power, #custom-l_end, #custom-r_end {
-    color: @main-fg;
     background: @main-bg;
     margin: 4px 0;
     padding: 0px 4px;
+}
+
+#battery {
+	color:  #7dcfff;
+}
+
+#pulseaudio {
+	color:  #ffc777;
+}
+
+#backlight {
+	color: #c53b53;
 }
 
 #tray {

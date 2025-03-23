@@ -114,7 +114,7 @@
             "on-scroll-down": "brightnessctl s 1%-"
         },
     "custom/clipboard": {
-        "format": "<span color=\"#89b4fa\">   </span>",
+        "format": "<span color=\"#3d59a1\">   </span>",
         "on-click": "sh ~/.scripts/menus/clipboard-manager.sh",
         "tooltip": false
     },
@@ -127,7 +127,7 @@
     },
     "custom/power": {
         "on-click": "sh ~/.scripts/menus/powermenu.sh",
-        "format": "<span color=\"#f38ba8\"></span>",
+        "format": "<span color=\"#ff007c\"></span>",
         "tooltip": false
     },
 

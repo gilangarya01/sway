@@ -16,6 +16,7 @@ set $right l
 set $term foot
 set $browser firefox
 set $filemanager thunar
+set $texteditor vscodium
 
 
 
@@ -46,20 +47,18 @@ for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable;
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] resize set 800 500
 for_window [title="File Upload"] resize set 800 500
+for_window [app_id="xdg-desktop-portal-gtk"] floating enable
+for_window [app_id="xdg-desktop-portal-gtk"] resize set 800 500
+
+for_window [app_id="zenity"] floating enable
+for_window [app_id="zenity"] resize set 800 500
 
 for_window [window_role="About"] floating enable
 for_window [window_role="Organizer"] floating enable
 for_window [window_role="Preferences"] floating enable
-for_window [window_role="bubble"] floating enable
-for_window [window_role="page-info"] floating enable
 for_window [window_role="pop-up"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [window_role="toolbox"] floating enable
-for_window [window_role="webconsole"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="bubble"] floating enable
 
 
 
@@ -80,7 +79,7 @@ output eDP-1 resolution 1366x768 position 0,0
 ##################
 
 font pango: 0xProto Nerd Font 10
-gaps inner 5
+gaps inner 20
 default_floating_border pixel 3
 default_border pixel 3
 
@@ -113,6 +112,7 @@ bindsym $mod+f exec $browser
 bindsym $mod+e exec $filemanager
 bindsym $mod+space exec rofi -show drun -theme '~/.config/rofi/app-menu.rasi'
 bindsym $mod+x exec sh ~/.scripts/menus/powermenu.sh
+bindsym $mod+c exec $texteditor
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
