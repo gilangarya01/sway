@@ -1,5 +1,5 @@
 * {
-    main-bg:            rgba(26, 27, 38, 0.95);
+    main-bg:            rgb(26, 27, 38);
     main-fg:            #101c44;
     main-br:            #e1e2e7;
     select-bg:          #e1e2e7;

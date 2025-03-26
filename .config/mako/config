@@ -4,7 +4,7 @@ actions=1
 # Format
 font=0xProto Nerd Font 11
 border-color=#e1e2e7
-border-size=3
+border-size=2
 background-color=#1a1b26F2
 text-color=#c0caf5
 format=<b>%s</b> <span color="#7aa2f7">(%a)</span>\n%b

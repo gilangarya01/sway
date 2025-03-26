@@ -1,66 +1,100 @@
+// Config //
 configuration {
-    show-icons:                 false;
+    show-icons:					false;
 }
 
 * {
-    main-bg:            rgba(26, 27, 38, 0.95);
-    main-br:            #E1E2E7;
-    select-bg:          #292E42;
-    select-fg:			#c53b53;
-    text:				#CDD6F4;
-    text-fg:			#101C44;
+    main-bg:         		    rgb(26, 27, 38);
+    main-br:            		#E1E2E7;
+    select-bg:          		#292E42;
+    select-fg:					#c53b53;
+    text:						#CDD6F4;
+    text-fg:					#101C44;
 }
 
+// Main //
 window {
-    fullscreen:                  false;
-    enabled:                     true;
-    border:                      2px solid;
-    border-radius:               5px;
-    border-color:                @main-br;
-    background-color:            @main-bg;
+    transparency:               "real";
+    fullscreen:                 false;
+    enabled:                    true;
+    cursor:                     "default";
+    spacing:                    0.5em;
+    padding:					1em 2em 1em 2em;
+    border-radius:              5px;
+    background-color:           @main-bg;
+    border:						2px solid;
+    border-color:				@main-br;
 }
 
 mainbox {
-    enabled:                     true;
-    spacing:                     15px;
-    padding:                     30px;
-    border:                      0px solid;
-    background-color:            transparent;
-    children:                    [ "listview" ];
+    enabled:                    true;
+    spacing:                    0.5em;
+    orientation:                horizontal;
+    children:                   [ "listbox" ];
+    background-color:           transparent;
+}
+
+inputbar {
+    enabled:                    true;
+    children:                   [ prompt ];
+    background-color:           transparent;
+}
+
+prompt {
+    enabled:                    true;
+    padding:                    0.5em 1.2em 0.5em 1em;
+    text-align:                 center;
+    cursor:                     default;
+    background-color:           @main-br;
+    text-color:                 @text-fg;
+    border:                     2px solid;
+    border-color:               @main-br;
+    border-radius:              5px;
+}
+
+// Lists //
+listbox {
+    spacing:                    1em;
+    children:                   [ "inputbar", "listview" ];
+    background-color:           transparent;
 }
 
 listview {
-    enabled:                     true;
-    columns:                     3;
-    lines:                       1;
-    cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
-    spacing:                     15px;
-    background-color:            transparent;
+	enabled:                    true;
+    columns:                    3;
+    lines:                      1;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    reverse:                    false;
+    fixed-height:               true;
+    fixed-columns:              true;
+    spacing:                    15px;
+    background-color:           transparent;
 }
 
+// Elements //
 element {
-    enabled:                     true;
-    padding:                     30px 20px 30px 10px;
-    border-radius:               5px;
-    background-color:            @select-bg;
-    cursor:                      pointer;
+    enabled:                    true;
+    padding:                    30px 20px 30px 10px;
+    border-radius:              5px;
+    background-color:           @select-bg;
+    cursor:                     pointer;
 }
 
 element-text {
-    font:                        "feather bold 32";
-    background-color:            transparent;
-    text-color:                  @text;
-    cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.5;
+    font:                       "0xProto Nerd Font bold 32";
+    background-color:           transparent;
+    text-color:                 @text;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.5;
 }
 
 element selected.normal {
-    background-color:            @select-fg;
+    background-color:           @select-fg;
 }
+
+
+

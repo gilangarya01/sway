@@ -48,7 +48,7 @@ prompt {
     text-align:                  center;
     cursor:                      default;
     background-color:            @main-br;
-    text-color:                  @select-fg;
+    text-color:                  @text-fg;
     border:                      2px solid;
     border-color:                @main-br;
     border-radius:               5px;
