@@ -189,7 +189,7 @@ bindsym $mod+Alt+Up resize shrink height 10px
 bindsym $mod+Alt+Right resize grow width 10px
 
 # Special key to take a screenshot with grim
-bindsym Print exec grim $(xdg-user-dir PICTURES)/Screenshoots/$(date +'%s_grim.png')
+bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%s_grim.png')
 
 
 

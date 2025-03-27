@@ -9,7 +9,7 @@ if status --is-interactive
 end
 
 function fish_greeting
-    if test "$TERM_PROGRAM" != "vscode"
+    if test "$TERM" = "foot"
         fastfetch -c ~/.config/fastfetch/presets/simple.jsonc
     end
 end

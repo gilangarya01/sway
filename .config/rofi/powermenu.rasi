@@ -42,13 +42,12 @@ inputbar {
 
 prompt {
     enabled:                    true;
+    font:                       "0xProto Nerd Font bold 13";
     padding:                    0.5em 1.2em 0.5em 1em;
     text-align:                 center;
     cursor:                     default;
-    background-color:           @main-br;
-    text-color:                 @text-fg;
-    border:                     2px solid;
-    border-color:               @main-br;
+    background-color:           @select-fg;
+    color:						@text;
     border-radius:              5px;
 }
 
@@ -62,7 +61,7 @@ listbox {
 listview {
 	enabled:                    true;
     columns:                    3;
-    lines:                      1;
+    lines:                      2;
     cycle:                      true;
     dynamic:                    true;
     scrollbar:                  false;
@@ -77,7 +76,7 @@ listview {
 // Elements //
 element {
     enabled:                    true;
-    padding:                    30px 20px 30px 10px;
+    padding:					30px 20px 30px 10px;
     border-radius:              5px;
     background-color:           @select-bg;
     cursor:                     pointer;

@@ -1,10 +1,9 @@
 // Config //
 configuration {
     modi:                        "drun";
-    show-icons:                  true;
+    show-icons:                  false;
     display-drun:                "";
     font:                        "0xProto Nerd Font 10";
-    icon-theme:                  "Tela-circle-dark";
 }
 
 @theme "theme"
@@ -93,7 +92,7 @@ listview {
 element {
     enabled:                     true;
     spacing:                     0.8em;
-    padding:                     0.5em 0.5em 0.5em 0.5em;
+    padding:                     1em;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  inherit;
@@ -103,13 +102,6 @@ element selected.normal {
     background-color:            @select-bg;
     text-color:                  @text-fg;
     border-radius:               5px;
-}
-
-element-icon {
-    size:                        2.8em;
-    cursor:                      inherit;
-    background-color:            transparent;
-    text-color:                  inherit;
 }
 
 element-text {

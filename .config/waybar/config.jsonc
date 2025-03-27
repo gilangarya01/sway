@@ -55,7 +55,7 @@
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 22,
-        "icon-theme": "Tela-circle-dark",
+        "icon-theme": "Tela-circle",
         "tooltip-format": "{title}",
         "on-click": "activate",
     },

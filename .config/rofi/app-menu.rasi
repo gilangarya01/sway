@@ -4,7 +4,7 @@ configuration {
     show-icons:                  true;
     display-drun:                "󱎱 Apps:";
     font:                        "0xProto Nerd Font 10";
-    icon-theme:                  "Tela-circle-dark";
+    icon-theme:                  "Tela-circle";
 }
 
 @theme "theme"
