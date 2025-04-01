@@ -5,7 +5,7 @@ configuration {
 
 * {
     main-bg:         		    rgb(26, 27, 38);
-    main-br:            		#E1E2E7;
+    main-br:            		#7aa2f7;
     select-bg:          		#292E42;
     select-fg:					#c53b53;
     text:						#CDD6F4;
@@ -42,7 +42,7 @@ inputbar {
 
 prompt {
     enabled:                    true;
-    font:                       "0xProto Nerd Font bold 13";
+    font:                       "0xProto Nerd Font bold 10";
     padding:                    0.5em 1.2em 0.5em 1em;
     text-align:                 center;
     cursor:                     default;
@@ -60,7 +60,7 @@ listbox {
 
 listview {
 	enabled:                    true;
-    columns:                    3;
+    columns:                    2;
     lines:                      2;
     cycle:                      true;
     dynamic:                    true;

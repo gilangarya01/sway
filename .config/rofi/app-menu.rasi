@@ -1,6 +1,7 @@
 // Config //
 configuration {
     modi:                        "drun";
+    drun-sort: 					 true;
     show-icons:                  true;
     display-drun:                "󱎱 Apps:";
     font:                        "0xProto Nerd Font 10";

@@ -1,7 +1,7 @@
 @define-color main-bg rgb(26, 27, 38);
 @define-color main-fg rgb(225, 225, 245);
-@define-color wb-act-bg rgb(225,226,231);
-@define-color wb-act-fg rgb(13, 12, 26);
+@define-color wb-act-bg rgb(122, 162, 247);
+@define-color wb-act-fg #15161E;
 
 * {
 	border-radius: 0;
@@ -56,15 +56,15 @@ tooltip {
 }
 
 #battery {
-	color:  #7dcfff;
+	color:  #7aa2f7;
 }
 
 #pulseaudio {
-	color:  #ffc777;
+	color:  #e0af68;
 }
 
 #backlight {
-	color: #c53b53;
+	color: #f7768e;
 }
 
 #tray {

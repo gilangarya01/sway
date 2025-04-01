@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Konstanta global
-ENABLED_COLOR="#c3e88d"
-DISABLED_COLOR="#ff757f"
+ENABLED_COLOR="#9ece6a"
+DISABLED_COLOR="#f7768e"
 SIGNAL_ICONS=("󰤟 " "󰤢 " "󰤥 " "󰤨 ")
 SECURED_SIGNAL_ICONS=("󰤡 " "󰤤 " "󰤧 " "󰤪 ")
 WIFI_DISABLED_ICON="󰖪 "

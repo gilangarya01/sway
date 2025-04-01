@@ -1,12 +1,10 @@
 #!/bin/bash
 
-choice=$(printf "󰍃\n\n\n\n\n" | rofi -dmenu -p "⏻  Powermenu: " -theme "~/.config/rofi/powermenu.rasi")
+choice=$(printf "󰍃\n\n\n" | rofi -dmenu -p "⏻  Powermenu: " -theme "~/.config/rofi/powermenu.rasi")
 
 case "$choice" in
   "󰍃") pkill -KILL -u "$USER" ;;
-  "") systemctl reboot ;;
   "") systemctl poweroff ;;
-  "") ;;
-  "") ;;
-  "") ;;
+  "") systemctl reboot ;;
+  "") swaylock -f ;;
 esac

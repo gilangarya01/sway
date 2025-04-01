@@ -1,5 +1,5 @@
 if status is-login
-    if test -z "$DISPLAY" && test "$(tty)" = "/dev/tty1"
+    if test -z "$DISPLAY" && test "$(tty)" = /dev/tty1
         exec sway
     end
 end
@@ -9,7 +9,7 @@ if status --is-interactive
 end
 
 function fish_greeting
-    if test "$TERM" = "foot"
+    if test "$TERM" = foot
         fastfetch -c ~/.config/fastfetch/presets/simple.jsonc
     end
 end
@@ -18,14 +18,12 @@ end
 ## VARIABLE ##
 ##############
 
-set -x MOZ_ENABLE_WAYLAND 1
-set -x QT_QPA_PLATFORM wayland
-set -x QT_STYLE_OVERRIDE kvantum
-set -x XDG_CURRENT_DESKTOP Sway
-set -x GTK_THEME Tokyonight-Dark
-set -x EDITOR micro
-
-
+set -g MOZ_ENABLE_WAYLAND 1
+set -g QT_QPA_PLATFORM wayland
+set -g QT_STYLE_OVERRIDE kvantum
+set -g XDG_CURRENT_DESKTOP Sway
+set -g GTK_THEME Tokyonight-Dark
+set -g EDITOR micro
 
 ###########
 ## ALIAS ##
@@ -33,8 +31,7 @@ set -x EDITOR micro
 
 alias sudo='sudo '
 alias c=clear
-alias mi=micro
-alias code=codium
+alias vi=nvim
 alias start='sudo systemctl start '
 alias stop='sudo systemctl stop '
 alias ff=fastfetch
@@ -68,7 +65,7 @@ alias cleandock='docker rm -f $(docker ps -a -q) && docker rmi -f $(docker image
 
 alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
-alias hw='hwinfo --short'                                   # Hardware Info
+alias hw='hwinfo --short' # Hardware Info
 alias update='sudo pacman -Syu'
 alias mirror="sudo cachyos-rate-mirrors"
 alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
