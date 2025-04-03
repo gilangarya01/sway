@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Type=Application
+Name=Wuthering Waves
+Icon=lutris_wuthering-waves
+Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/1
+Categories=Game
+TryExec=lutris

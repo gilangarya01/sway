@@ -60,7 +60,7 @@ entry selection, label selection, textview text selection:focus, textview text s
 
 treeview.view:selected, .view:selected {
   color: rgba(26, 27, 38, 0.87);
-  background-color: #e1e2e7;
+  background-color: #7AA2F7;
 }
 
 .linked:not(.vertical) > button, .linked:not(.vertical) > spinbutton.vertical, .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) > entry {
@@ -1468,7 +1468,7 @@ searchbar > revealer > box {
 }
 
 .titlebar stackswitcher:checked {
-  background-color: #e1e2e7;
+  background-color: #7AA2F7;
   color: rgba(26, 27, 38, 0.87);
 }
 
@@ -4401,7 +4401,7 @@ stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destruc
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action):checked {
-  background-color: #e1e2e7;
+  background-color: #7AA2F7;
   color: rgba(26, 27, 38, 0.87);
 }
 
@@ -5970,7 +5970,7 @@ window.background > box.vertical > box.horizontal > frame > border {
 window.background > box.vertical > box.horizontal > frame > scrolledwindow > viewport.frame list {
   border-radius: 12px;
   margin: 0 6px 6px;
-  background-color: #e1e2e7;
+  background-color: #7AA2F7;
   color: rgba(26, 27, 38, 0.87);
 }
 

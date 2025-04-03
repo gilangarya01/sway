@@ -4743,7 +4743,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer StWidget.focused .app-well-app-running-dot {
-  background-color: #e1e2e7 !important;
+  background-color: #7AA2F7 !important;
 }
 
 #dashtodockContainer:overview #dash .app-well-app-running-dot {
@@ -4789,7 +4789,7 @@ StWidget.focused .app-grid-running-dot {
 }
 
 #dashtodockContainer StWidget.focused .app-well-app-running-dot {
-  background-color: #e1e2e7;
+  background-color: #7AA2F7;
 }
 
 #dashtodockContainer.opaque #dash .dash-background {

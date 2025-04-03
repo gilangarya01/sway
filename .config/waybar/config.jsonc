@@ -33,6 +33,7 @@
         "orientation": "horizontal",
         "modules": [
         	"custom/clipboard",
+        	"custom/bluetooth",
         	"custom/networkmanager",
             "custom/power"
         ]
@@ -108,18 +109,25 @@
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
     },
     "backlight": {
-            "format": "{icon} {percent}%",
-            "format-icons": ["󰃞", "󰃟", "󰃠"],
-            "on-scroll-up": "brightnessctl s 1%+",
-            "on-scroll-down": "brightnessctl s 1%-"
-        },
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl s 1%+",
+        "on-scroll-down": "brightnessctl s 1%-"
+    },
     "custom/clipboard": {
         "format": "<span color=\"#7aa2f7\">   </span>",
         "on-click": "sh ~/.scripts/menus/clipboard-manager.sh",
         "tooltip": false
     },
+    "custom/bluetooth": {
+        "exec": "sh ~/.scripts/menus/bluetooth-manager.sh --status | cat",
+        "format": "{}  ",
+        "interval": 5,
+        "on-click": "sh ~/.scripts/menus/bluetooth-manager.sh",
+        "tooltip": false
+    },
     "custom/networkmanager": {
-        "exec": "sh ~/.scripts/menus/network-manager.sh --status --disabled-color \"#f38ba8\" --enabled-color \"#a6e3a1\" | cat",
+        "exec": "sh ~/.scripts/menus/network-manager.sh --status | cat",
         "format": "{}  ",
         "interval": 5,
         "on-click": "sh ~/.scripts/menus/network-manager.sh",

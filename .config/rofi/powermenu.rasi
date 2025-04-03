@@ -4,7 +4,7 @@ configuration {
 }
 
 * {
-    main-bg:         		    rgb(26, 27, 38);
+    main-bg:         		    rgb(26, 27, 38, 0.97);
     main-br:            		#7aa2f7;
     select-bg:          		#292E42;
     select-fg:					#c53b53;
@@ -19,7 +19,7 @@ window {
     enabled:                    true;
     cursor:                     "default";
     spacing:                    0.5em;
-    padding:					1em 2em 1em 2em;
+    padding:					2em 3em;
     border-radius:              5px;
     background-color:           @main-bg;
     border:						2px solid;
@@ -60,8 +60,8 @@ listbox {
 
 listview {
 	enabled:                    true;
-    columns:                    2;
-    lines:                      2;
+    columns:                    4;
+    lines:                      1;
     cycle:                      true;
     dynamic:                    true;
     scrollbar:                  false;
@@ -83,7 +83,7 @@ element {
 }
 
 element-text {
-    font:                       "0xProto Nerd Font bold 32";
+    font:                       "0xProto Nerd Font bold 35";
     background-color:           transparent;
     text-color:                 @text;
     cursor:                     inherit;

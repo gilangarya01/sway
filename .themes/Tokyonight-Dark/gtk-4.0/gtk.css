@@ -2417,7 +2417,7 @@ headerbar stackswitcher {
 }
 
 headerbar stackswitcher:checked {
-  background-color: #e1e2e7;
+  background-color: #7AA2F7;
   color: rgba(26, 27, 38, 0.87);
 }
 
@@ -5673,7 +5673,7 @@ stackswitcher.linked > button:not(.suggested-action):not(.destructive-action):fo
 }
 
 stackswitcher.linked > button:not(.suggested-action):not(.destructive-action):checked {
-  background-color: #e1e2e7;
+  background-color: #7AA2F7;
   color: rgba(26, 27, 38, 0.87);
 }
 

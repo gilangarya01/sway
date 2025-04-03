@@ -48,7 +48,7 @@ tooltip {
 
 #tray, #clock, #battery, 
 #pulseaudio, #backlight, #idle_inhibitor, 
-#custom-clipboard, #custom-networkmanager, 
+#custom-clipboard, #custom-networkmanager, #custom-bluetooth,
 #custom-power, #custom-l_end, #custom-r_end {
     background: @main-bg;
     margin: 4px 0;
