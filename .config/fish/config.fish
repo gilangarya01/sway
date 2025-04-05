@@ -26,6 +26,9 @@ set -gx QT_QPA_PLATFORM wayland
 set -gx XDG_CURRENT_DESKTOP Sway
 set -gx GTK_THEME Tokyonight-Dark
 set -gx EDITOR micro
+set -gx LIBVA_DRIVER_NAME iHD
+set -gx VDPAU_DRIVER va_gl
+set -gx WLR_RENDERER vulkan
 
 ###########
 ## ALIAS ##
@@ -61,7 +64,7 @@ alias grh='git reset --hard '
 alias grr='git remote remove '
 
 # Rekaman layar
-alias record='~/.scripts/record_wayland.sh'
+alias record='~/.scripts/record.sh'
 
 # Docker (Membersihkan semua container, images, volume, dan network)
 alias cleandock='docker container prune -f && docker volume prune -f && docker network prune -f'

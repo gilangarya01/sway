@@ -52,7 +52,7 @@ manage_bluetooth() {
     [[ "$trusted_status" == "yes" ]] && trust_option="Untrust"
 
     local action
-    action=$(echo -e "Connect\nDisconnect\nRemove\n$trust_option" | rofi -dmenu -p "Action for $chosen_device:")
+    action=$(echo -e "Connect\nDisconnect\nRemove\n$trust_option" | rofi -dmenu -p "Action for $chosen_device:" -theme ~/.config/rofi/menu.rasi)
 
     case "$action" in
         "Connect") bluetoothctl connect "$mac_address" && notify-send "Bluetooth" "Connected to $chosen_device." ;;
@@ -79,7 +79,7 @@ main_menu() {
         [[ "$bt_status" == "yes" ]] && bt_toggle="$BLUETOOTH_OFF_ICON Disable Bluetooth" && bt_command="power off"
 
         local chosen_option
-        chosen_option=$(echo -e "$bt_toggle\n$BLUETOOTH_MANAGE_ICON Manage Bluetooth\n$BLUETOOTH_SERVICE_ICON Disable Bluetooth Service" | rofi -dmenu -p "Bluetooth:")
+        chosen_option=$(echo -e "$bt_toggle\n$BLUETOOTH_MANAGE_ICON Manage Bluetooth\n$BLUETOOTH_SERVICE_ICON Disable Bluetooth Service" | rofi -dmenu -p "Bluetooth:" -theme ~/.config/rofi/menu.rasi)
 
         case "$chosen_option" in
             "$BLUETOOTH_ON_ICON Enable Bluetooth" | "$BLUETOOTH_OFF_ICON Disable Bluetooth")
@@ -93,7 +93,7 @@ main_menu() {
         esac
     else
         local chosen_option
-        chosen_option=$(echo -e "$BLUETOOTH_SERVICE_ICON Enable Bluetooth Service" | rofi -dmenu -p "Bluetooth:")
+        chosen_option=$(echo -e "$BLUETOOTH_SERVICE_ICON Enable Bluetooth Service" | rofi -dmenu -p "Bluetooth:" -theme ~/.config/rofi/menu.rasi)
         
         case "$chosen_option" in
             "$BLUETOOTH_SERVICE_ICON Enable Bluetooth Service")

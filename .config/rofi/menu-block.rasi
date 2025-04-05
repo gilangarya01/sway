@@ -4,7 +4,7 @@ configuration {
 }
 
 * {
-    main-bg:         		    rgb(26, 27, 38, 0.97);
+    main-bg:         		    rgb(26, 27, 38);
     main-br:            		#7aa2f7;
     select-bg:          		#292E42;
     select-fg:					#c53b53;

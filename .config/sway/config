@@ -24,6 +24,7 @@ set $texteditor vscodium
 ### AUTOSTART ###
 #################
 
+exec_always autotiling
 exec wl-paste --type text --watch cliphist store # clipboard store text data
 exec wl-paste --type image --watch cliphist store # clipboard store image data
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -43,12 +44,11 @@ for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable;
 for_window [title="(?:Open|Save) (?:File|Folder|As)"] resize set 800 500
 for_window [title="File Upload"] resize set 800 500
+for_window [app_id="mpv"] floating enable
+for_window [app_id="mpv"] resize set 800 500
 for_window [app_id="xdg-desktop-portal-gtk"] floating enable
 for_window [app_id="xdg-desktop-portal-gtk"] resize set 800 500
 for_window [title="^Waydroid$"] fullscreen enable
-
-for_window [app_id="zenity"] floating enable
-for_window [app_id="zenity"] resize set 800 500
 
 for_window [window_role="About"] floating enable
 for_window [window_role="Organizer"] floating enable
@@ -74,6 +74,15 @@ output eDP-1 resolution 1366x768 position 0,0
 seat seat0 xcursor_theme Bibata-Modern-Ice 24
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+
+
+input "1267:12587:ELAN050B:01_04F3:312B_Touchpad" {
+    tap enabled
+    natural_scroll enabled
+    dwt enabled
+    accel_profile adaptive
+    middle_emulation enabled
+}
 
 
 
@@ -115,6 +124,7 @@ bindsym $mod+f exec $browser
 bindsym $mod+e exec $filemanager
 bindsym $mod+space exec rofi -show drun -theme '~/.config/rofi/app-menu.rasi'
 bindsym $mod+x exec sh ~/.scripts/menus/powermenu.sh
+bindsym $mod+m exec sh ~/.scripts/menus/music.sh
 bindsym $mod+c exec $texteditor
 
 # Reload the configuration file

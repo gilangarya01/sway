@@ -7,7 +7,7 @@ This repository contains configuration files (dotfiles) to set up a streamlined,
 ## Features
 - **Sway Customization**: Includes configurations for panel layout, themes, and keyboard shortcuts.
     - **Themes**: Tokyonight-Dark
-    - **Icons**: Tela circle dark
+    - **Icons**: Tela circle
     - **Cursor**: Bibata-Modern-Ice
 
 ## Installation

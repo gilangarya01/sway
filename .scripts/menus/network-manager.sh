@@ -38,7 +38,7 @@ manage_wifi() {
     
     [[ -z "$chosen_network" ]] && notify-send "Wi-Fi Management" "No network selected." && exit 0
     
-    local action=$(echo -e "Connect\nDisconnect\nForget" | rofi -dmenu -p "Action for $chosen_network:")
+    local action=$(echo -e "Connect\nDisconnect\nForget" | rofi -dmenu -p "Action for $chosen_network:"  -theme ~/.config/rofi/menu.rasi)
     case "$action" in
         "Connect") connect_to_wifi "$chosen_network" ;;
         "Disconnect") nmcli connection down "$chosen_network" && notify-send "Wi-Fi Disconnected" "Disconnected from $chosen_network" ;;
@@ -54,7 +54,7 @@ connect_to_wifi() {
         nmcli connection up "$ssid" && notify-send "Wi-Fi Connected" "Connected to $ssid."
     else
         while true; do
-            wifi_password=$(rofi -dmenu -p "Password: " -password -theme ~/.config/rofi/password.rasi)
+            wifi_password=$(rofi -dmenu -p "Password: " -password -theme ~/.config/rofi/input.rasi)
             [[ -z "$wifi_password" ]] && notify-send "Wi-Fi Connection" "No password entered." && exit 0
 
             nmcli device wifi connect "$ssid" password "$wifi_password"
@@ -78,7 +78,7 @@ main_menu() {
     
     [[ "$wifi_status" == "enabled" ]] && wifi_toggle="$WIFI_TOGGLE_OFF_ICON Disable Wi-Fi" && wifi_command="off"
     
-    local chosen_option=$(echo -e "$wifi_toggle\n$WIFI_MANAGE_ICON Manage Wi-Fi" | rofi -dmenu -p "Network:")
+    local chosen_option=$(echo -e "$wifi_toggle\n$WIFI_MANAGE_ICON Manage Wi-Fi" | rofi -dmenu -p "Network:" -theme ~/.config/rofi/menu.rasi)
     
     case "$chosen_option" in
         "$WIFI_TOGGLE_ON_ICON Enable Wi-Fi" | "$WIFI_TOGGLE_OFF_ICON Disable Wi-Fi")
