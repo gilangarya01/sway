@@ -1,6 +1,7 @@
 # Jika sesi login dan berada di tty1, jalankan Sway
 if status is-login
     if test -z "$DISPLAY" && test (tty) = /dev/tty1
+        source ~/.config/sway/env
         exec sway
     end
 end

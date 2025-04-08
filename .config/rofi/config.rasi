@@ -17,7 +17,7 @@ window {
     spacing:                     0.5em;
     padding:					 1em 2em 1em 2em;
     border:                      2px solid;
-    border-radius:               5px;
+    border-radius:               10px;
     border-color:                @main-br;
     background-color:            @main-bg;
 }
@@ -50,7 +50,7 @@ prompt {
     text-color:                  @text-fg;
     border:                      2px solid;
     border-color:                @main-br;
-    border-radius:               5px;
+    border-radius:               10px;
 }
 
 entry {
@@ -61,7 +61,7 @@ entry {
     text-color:                  inherit;
     border:                      2px solid;
     border-color:                @main-br;
-    border-radius:               5px;
+    border-radius:               10px;
 }
 
 // Lists //
@@ -101,7 +101,7 @@ element {
 element selected.normal {
     background-color:            @select-bg;
     text-color:                  @text-fg;
-    border-radius:               5px;
+    border-radius:               10px;
 }
 
 element-text {

@@ -20,7 +20,7 @@ window {
     cursor:                     "default";
     spacing:                    0.5em;
     padding:					2em 3em;
-    border-radius:              5px;
+    border-radius:              10px;
     background-color:           @main-bg;
     border:						2px solid;
     border-color:				@main-br;
@@ -48,7 +48,7 @@ prompt {
     cursor:                     default;
     background-color:           @select-fg;
     color:						@text;
-    border-radius:              5px;
+    border-radius:              10px;
 }
 
 // Lists //
@@ -77,7 +77,7 @@ listview {
 element {
     enabled:                    true;
     padding:					30px 20px 30px 10px;
-    border-radius:              5px;
+    border-radius:              10px;
     background-color:           @select-bg;
     cursor:                     pointer;
 }

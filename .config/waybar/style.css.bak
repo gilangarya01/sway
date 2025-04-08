@@ -16,8 +16,8 @@ window#waybar {
 }
 
 window > box {
-    border-radius: 8px;
-    margin: 5px 5px 0 5px;
+    border-radius: 5px;
+    margin-top: 5px;
     padding-left: 10px;
 }
 
@@ -31,30 +31,25 @@ tooltip {
 /* ====== Workspaces & Taskbar ====== */
 #workspaces,
 #taskbar {
-	background: @main-bg;
-	border-radius: 15px;
+    background: @main-bg;
+    border-radius: 5px;
     margin: 4px 0;
-}
-
-#taskbar, #tray {
-	margin-left: 15px;
 }
 
 #workspaces button,
 #taskbar button {
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 #workspaces button {
-	padding: 3px 0px;
+	padding: 3px 7px;
 }
 
 #taskbar button {
-	padding: 2px 3px;
-	margin: 0 5px;
+	padding: 3px 4px;
 }
 
-#workspaces button.focused,
+#workspaces button.active,
 #taskbar button.active {
     background: @wb-act-bg;
     color: @wb-act-fg;
@@ -73,9 +68,9 @@ tooltip {
 #custom-power,
 #custom-l_end,
 #custom-r_end {
-    margin: 3px 0;
-    padding: 0 4px;
     background: @main-bg;
+    margin: 4px 0;
+    padding: 0 4px;
 }
 
 /* ====== Icon Color Overrides ====== */
@@ -100,11 +95,15 @@ tooltip {
 
 /* ====== Decorative Separators ====== */
 #custom-l_end {
-    border-radius: 15px 0 0 15px;
+    border-radius: 5px 0 0 5px;
     margin-left: 9px;
 }
 
 #custom-r_end {
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 5px 5px 0;
     margin-right: 9px;
+}
+
+#custom-padd {
+    margin-left: 9px;
 }

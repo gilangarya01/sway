@@ -16,7 +16,6 @@ PACMAN_PKGS=(
   ttf-0xproto-nerd
   xorg-xwayland
   wl-clipboard
-  fish
   sway
   waybar
   foot
@@ -35,8 +34,10 @@ PACMAN_PKGS=(
   starship
   polkit-gnome
   autotilling
+  mpv
   yt-dlp
   hyprpicker
+  xdg-user-dirs
   xdg-desktop-portal
   xdg-desktop-portal-gtk
   xdg-desktop-portal-wlr
@@ -73,18 +74,12 @@ clone_dotfiles() {
   success "Dotfiles berhasil disalin."
 }
 
-set_fish_default() {
-  info "Mengatur fish sebagai shell default..."
-  chsh -s /bin/fish
-  success "Shell default diubah ke fish."
-}
 
 # ========== Eksekusi ==========
 info "Memulai setup dotfiles dan lingkungan kerja..."
 
 install_yay
 install_packages
-set_fish_default
 clone_dotfiles
 
 success "Instalasi selesai! Silakan reboot dan jalankan Sway dengan perintah 'sway'."
