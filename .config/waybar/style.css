@@ -1,57 +1,59 @@
 @define-color main-bg rgb(26, 27, 38);
 @define-color main-fg rgb(225, 225, 245);
 @define-color wb-act-bg rgb(122, 162, 247);
-@define-color wb-act-fg #15161E;
+@define-color wb-act-fg rgb(26, 27, 38);
 
 * {
     font-family: "0xProto Nerd Font";
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.97em;
     border-radius: 0;
 }
 
-/* ====== Waybar Window ====== */
+/* === Waybar Window === */
 window#waybar {
     background: transparent;
 }
 
 window > box {
-    border-radius: 8px;
-    margin: 5px 5px 0 5px;
-    padding-left: 10px;
+    border-radius: 0.67em;
+    margin: 0.42em 0.42em 0 0.42em;
+    padding-left: 0.83em;
 }
 
-/* ====== Tooltip ====== */
+/* === Tooltip === */
 tooltip {
     background: @main-bg;
     color: @main-fg;
-    border-radius: 5px;
+    border-radius: 0.42em;
 }
 
-/* ====== Workspaces & Taskbar ====== */
+/* === Workspaces & Taskbar === */
 #workspaces,
 #taskbar {
-	background: @main-bg;
-	border-radius: 15px;
-    margin: 4px 0;
+    background: @main-bg;
+    border-radius: 1.25em;
+    margin: 0.33em 0;
 }
 
-#taskbar, #tray {
-	margin-left: 15px;
+#taskbar,
+#tray {
+    margin-left: 1.25em;
 }
 
 #workspaces button,
 #taskbar button {
-    border-radius: 20px;
+    border-radius: 1.67em;
 }
 
 #workspaces button {
-	padding: 3px 0px;
+    padding: 0.29em 0.6em 0.25em 0.2em;
+    min-width: 1.67em;
+    color: #9ECE6A;
 }
 
 #taskbar button {
-	padding: 2px 3px;
-	margin: 0 5px;
+    padding: 0.25em 0.5em;
 }
 
 #workspaces button.focused,
@@ -60,7 +62,7 @@ tooltip {
     color: @wb-act-fg;
 }
 
-/* ====== Module Styling ====== */
+/* === Modules === */
 #tray,
 #clock,
 #battery,
@@ -73,12 +75,12 @@ tooltip {
 #custom-power,
 #custom-l_end,
 #custom-r_end {
-    margin: 3px 0;
-    padding: 0 4px;
     background: @main-bg;
+    margin: 0.25em 0;
+    padding: 0 0.33em;
 }
 
-/* ====== Icon Color Overrides ====== */
+/* === Icon Coloring === */
 #battery {
     color: #7aa2f7;
 }
@@ -91,20 +93,20 @@ tooltip {
     color: #f7768e;
 }
 
-/* ====== Tray Styling ====== */
+/* === Tray === */
 #tray {
-    border-radius: 5px;
-    margin-right: 18px;
-    padding: 0 5px;
+    border-radius: 0.42em;
+    margin-right: 1.5em;
+    padding: 0 0.42em;
 }
 
-/* ====== Decorative Separators ====== */
+/* === Custom Separators === */
 #custom-l_end {
-    border-radius: 15px 0 0 15px;
-    margin-left: 9px;
+    border-radius: 1.25em 0 0 1.25em;
+    margin-left: 0.75em;
 }
 
 #custom-r_end {
-    border-radius: 0 15px 15px 0;
-    margin-right: 9px;
+    border-radius: 0 1.25em 1.25em 0;
+    margin-right: 0.75em;
 }

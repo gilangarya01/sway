@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# ========== Warna ==========
+# ========== Colors ==========
 GREEN="\e[32m"
 RED="\e[31m"
 YELLOW="\e[33m"
 NC="\e[0m"
 
-# ========== Fungsi Utilitas ==========
+# ========== Utility Functions ==========
 info() { echo -e "${YELLOW}[INFO]${NC} $1"; }
 success() { echo -e "${GREEN}[OK]${NC} $1"; }
 error() { echo -e "${RED}[ERROR]${NC} $1"; }
 
-# ========== Daftar Paket ==========
+# ========== Package Lists ==========
 PACMAN_PKGS=(
   ttf-0xproto-nerd
   xorg-xwayland
@@ -28,14 +28,16 @@ PACMAN_PKGS=(
   swaybg
   rofi-wayland
   dunst
+  micro
   brightnessctl
   cliphist
   grim
   starship
   polkit-gnome
-  autotilling
+  autotiling
   mpv
   yt-dlp
+  viewnior
   hyprpicker
   xdg-user-dirs
   xdg-desktop-portal
@@ -43,43 +45,52 @@ PACMAN_PKGS=(
   xdg-desktop-portal-wlr
 )
 
-# ========== Fungsi ==========
+AUR_PKGS=(
+  swaylock-effects
+)
+
+# ========== Functions ==========
 install_yay() {
   if ! command -v yay &>/dev/null; then
-    info "Menginstal yay..."
+    info "Installing yay..."
     sudo pacman -S --needed git base-devel --noconfirm
     git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay
     makepkg -si --noconfirm
     cd ~
     rm -rf ~/yay
-    success "yay berhasil diinstal!"
+    success "yay installed successfully!"
   else
-    success "yay sudah terinstal."
+    success "yay is already installed."
   fi
 }
 
 install_packages() {
-  info "Menginstal paket dengan pacman..."
+  info "Installing packages with pacman..."
   sudo pacman -Syu --noconfirm "${PACMAN_PKGS[@]}"
 }
 
-clone_dotfiles() {
-  info "Menyalin dotfiles ke home directory..."
-  cp -r .config ~/
-  cp -r .local ~/
-  cp -r .icons ~/
-  cp -r .themes ~/
-  cp -r .scripts ~/
-  cp -r Pictures ~/
-  success "Dotfiles berhasil disalin."
+install_aur_packages() {
+  info "Installing AUR packages with yay..."
+  yay -S --noconfirm "${AUR_PKGS[@]}"
+  success "AUR packages installed successfully."
 }
 
+clone_dotfiles() {
+  info "Copying dotfiles to home directory..."
+  cp -r ./.config ~/
+  cp -r ./.icons ~/
+  cp -r ./.themes ~/
+  cp -r ./.scripts ~/
+  cp -r ./Pictures ~/
+  success "Dotfiles copied successfully."
+}
 
-# ========== Eksekusi ==========
-info "Memulai setup dotfiles dan lingkungan kerja..."
+# ========== Execution ==========
+info "Starting dotfiles and environment setup..."
 
 install_yay
 install_packages
+install_aur_packages
 clone_dotfiles
 
-success "Instalasi selesai! Silakan reboot dan jalankan Sway dengan perintah 'sway'."
+success "Installation complete! Please reboot and start Sway using the 'sway' command."

@@ -64,12 +64,17 @@
       "1": [],
       "2": [],
       "3": []
-   	}
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "default": ""
+    }
   },
+  
 
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 22,
+    "icon-size": 20,
     "icon-theme": "Tela-circle",
     "tooltip-format": "{title}",
     "on-click": "activate"

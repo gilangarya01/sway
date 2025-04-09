@@ -1,6 +1,7 @@
 # Jika sesi login dan berada di tty1, jalankan Sway
 if status is-login
     if test -z "$DISPLAY" && test (tty) = /dev/tty1
+        fish ~/.config/sway/gsetting.sh
         source ~/.config/sway/env
         exec sway
     end
