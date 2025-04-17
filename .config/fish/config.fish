@@ -30,7 +30,7 @@ alias vi=nvim
 alias start='sudo systemctl start '
 alias stop='sudo systemctl stop '
 alias ff=fastfetch
-alias fishconfig='micro ~/.config/fish/config.fish'
+alias fishconfig='nvim ~/.config/fish/config.fish'
 
 # Sway
 alias getappid="swaymsg -t get_tree | jq '.. | select(.app_id?) | .app_id' | sort -u"
